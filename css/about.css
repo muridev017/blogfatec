@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.name{
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    background: linear-gradient(145deg, #e2e8ec, #fff);
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #fff;
+    cursor: pointer;
+    height: fit-content;
+    padding: 18px 25px;
+    transition: all .3s ease;
+    text-decoration: none;
+    
+}
+
+.headernav a:hover{
+    color: #ff014f;
+}
+
+
+.information{
+    margin-left: 36%;
+    justify-content: center;
+}
+
+.information img {
+    border-radius: 50%;
+}
+
+.information p {
+    display: flex;
+    margin-left: 10%;
+}

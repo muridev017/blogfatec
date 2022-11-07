@@ -24,6 +24,11 @@ html{
     padding-right: 8%;
 }
 
+img{
+    max-width: 6%;
+    border-radius: 33%;
+}
+
 .navLink a{
     text-decoration: none;
     color: black;
