@@ -2,3 +2,31 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+.lista{
+    list-style: none;
+    display: flex;
+    
+    padding-left: 50px;
+
+}
+
+a{
+    text-decoration: none;
+}
+
+.lista img {
+    display: flex;
+    justify-content: right;
+}
+
+.imgs{
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(145deg, #e2e8ec, #ffffff);
+    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    margin-top: 20%;
+}

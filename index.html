@@ -10,29 +10,54 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/reset.css">
+    <script src="/JS/carrossel.js"></script>
     <title>Portfolio Fatec</title>
 </head>
 
 <body>
     <header>
-        <div class="bg">
-            <ul class="navLink">
-                <img src="/img/Foto_de_perfil-removebg-preview.png" alt="">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="/pages/about.html">Sobre</a></li>
-                <li><a href="/pages/skills.html">Habilidades</a></li>
-                <li><a href="mailto: murilorodriguesdev@gmail.com">Contato</a></li>
-                <li><a href="https://www.linkedin.com/in/murilorodrigueswebdev/" class="btn">Me siga</a></li>
-            </ul>
-        </div>
+        <nav>
+            <div class="bg">
+                <ul class="navLink">
+                    <img src="/img/Foto_de_perfil-removebg-preview.png" alt="">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="/pages/about.html">Sobre</a></li>
+                    <li><a href="/pages/skills.html">Habilidades</a></li>
+                    <li><a href="mailto: murilorodriguesdev@gmail.com">Contato</a></li>
+                    <li><a href="https://www.linkedin.com/in/murilorodrigueswebdev/" class="btn">Me siga</a></li>
+                </ul>
+            </div>
+        </nav>
     </header>
     <main>
+        <div class="container">
+            <div class="gallery-wrapper">
+                <div class="gallery">
+                    <button class="arrow-left control" aria-label="Previous"><<</button>
+                    <button class="arrow-right control" aria-label="Next" >>></button>
+                    <img src="https://source.unsplash.com/250x250/?beach" class="item current-item" alt="">
+                    <img src="https://source.unsplash.com/250x250/?window" class="item current-item" alt="">
+                    <img src="https://source.unsplash.com/250x250/?field" class="item current-item" alt="">
+                    <img src="https://source.unsplash.com/250x250/?grass" class="item current-item" alt="">
+                    <img src="https://source.unsplash.com/250x250/?flower" class="item current-item" alt="">
+
+                </div>
+            </div>
+        </div>
         <div class="main">
             <h1>Bem-vindo</h1><br><br>
             <p>Oi, me chamo Murilo Rodrigues Mininel</p><br>
             <p>e faço sistemas para internet na FATEC em Jales.</p><br>
             <h2>Caso queiram saber mais sobre minha carreira profisisonal, tenho meu LinkedIn.</h2><br>
             <h2>ou meu GitHub para dar uma olhada em meus repositórios.</h2><br>
+        </div>
+
+        <div class="form">
+            <form action="" method="get">
+                <input type="text" name="nome" placeholder="digite seu nome">
+                <input type="e-mail" name="email" placeholder="digite seu e-mail">
+                <input type="submit" name="enviar" value="Enviar">
+            </form>
         </div>
     </main>
     <footer>
