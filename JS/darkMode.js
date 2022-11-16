@@ -1,15 +1,30 @@
-const toggle = document.getElementById('toggleDark');
-const body = document.querySelector('body');
+let darkMode = localStorage.getItem('darkMode')
+const darkModeToggle = document.querySelector('#switch-shadow')
 
-toggle.addEventListener('click', function(){
-    this.classList.toggle('bi-moon');
-    if(this.classList.toggle('bi-brightness-high-fill')){
-        body.style.background = 'white';
-        body.style.color = 'black';
-        body.style.transition = '2s';
-    }else{
-        body.style.background = 'black';
-        body.style.color = 'white';
-        body.style.transition = '2s';
+
+const ativarModoEscuro = () => {
+    document.body.classList.add('darkMode')
+    localStorage.setItem('darkMode', 'enabled')
+}
+
+const desativarModoEscuro = () => {
+    document.body.classList.remove('darkMode')
+    localStorage.setItem('darkMode', null)
+}
+
+if(darkMode === 'enabled'){
+    ativarModoEscuro()
+}else{
+    desativarModoEscuro()
+}
+
+darkModeToggle.addEventListener('click', () =>{
+    darkMode = localStorage.getItem('darkMode')
+    if (darkMode !== 'enabled') {
+        ativarModoEscuro()
+        console.log(darkMode)
+    }else {
+        desativarModoEscuro()
+        console.log(darkMode)
     }
-});
+})

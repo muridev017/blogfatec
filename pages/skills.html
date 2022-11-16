@@ -9,23 +9,44 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/skills.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <script src="/JS/darkMode.js" defer></script>
     <title>Habilidades</title>
 </head>
 
 <body>
     <header>
+        <nav>
+            <div class="switch__container">
+                <input id="switch-shadow" class="switch switch--shadow" type="checkbox">
+                <label for="switch-shadow"></label>
+              </div>
+            <div class="bg">
+                <ul class="navLink">
+                    <img src="/img/logo.jpeg" alt="">
+                    <li><a href="/index.html">Início</a></li>
+                    <li><a href="/pages/about.html">Sobre</a></li>
+                    <li><a href="/pages/skills.html">Habilidades</a></li>
+                    <li><a href="mailto: murilorodriguesdev@gmail.com">Contato</a></li>
+                    <li><a href="https://www.linkedin.com/in/murilorodrigueswebdev/" class="btn">Me siga</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
         <h1>Habilidades</h1>
 
         <p>Aqui está algumas das linguagens que aprendi e estou aprendendo.</p>
-    </header>
-    <div class="skills">
-        <ul class="lista">
-            <li><a href=""><img class="imgs" src="/img/skill1.png" alt="">JavaScript</a></li>
-            <li><a href=""><img class="imgs" src="/img/skill2.png" alt=""> React</a></li>
-            <li><a href=""><img class="imgs" src="/img/skill3.png" alt="">Node</a></li>
-            <li><a href=""><img class="imgs" src="/img/skill4.png" alt="">HTML</a></li>
-        </ul>
-    </div>
+        <div class="skills">
+            <ul class="lista">
+                <li><a href=""><img class="imgs" src="/img/skill1.png" alt="">JavaScript</a></li>
+                <li><a href=""><img class="imgs" src="/img/skill2.png" alt=""> React</a></li>
+                <li><a href=""><img class="imgs" src="/img/skill3.png" alt="">Node</a></li>
+                <li><a href=""><img class="imgs" src="/img/skill4.png" alt="">HTML</a></li>
+            </ul>
+        </div>
+    </main>
 </body>
 
 </html>

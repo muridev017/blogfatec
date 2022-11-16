@@ -1,176 +1,246 @@
 * {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
 }
+
+body {
+  padding: 25px;
+  background-color: #0b254a;
+  color: white;
+  font-size: 25px;
+  overflow-x: hidden;
+}
+
+.darkMode {
+  background-color: white;
+  color: black;
+  transition: all ease 0.5s;
+}
+
+.switch__container {
+  margin: 20px;
+  width: 100px;
+}
+
+.switch {
+  visibility: hidden;
+  position: absolute;
+  margin-left: -9999px;
+}
+
+.switch+label {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+}
+
+.switch--shadow+label {
+  padding: 2px;
+  width: 60px;
+  height: 30px;
+  background-color: #dddddd;
+  border-radius: 60px;
+}
+
+.switch--shadow+label:before,
+.switch--shadow+label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: "";
+}
+
+.switch--shadow+label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  transition: background 0.4s;
+}
+
+.switch--shadow+label:after {
+  width: 28px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s;
+}
+
+.switch--shadow:checked+label:before {
+  background-color: #8ce196;
+}
+
+.switch--shadow:checked+label:after {
+  transform: translateX(30px);
+}
+
 
 
 h1 {
-    text-align: center;
-    margin: 1em 0;
-    font-family: sans-serif;
-  }
-  
-  .container {
-    position: relative;
-    padding: 15px;
-    max-width: 640px;
-    margin: 0 auto;
-  }
-  
-  .gallery-wrapper {
-    overflow-x: auto;
-  }
-  
-  .arrow-left,
-  .arrow-right {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: auto;
-    bottom: 0;
-    font-size: 20px;
-    line-height: 250px;
-    width: 40px;
-    color: #fff;
-    transition: all 600ms ease-in-out;
-    background: linear-gradient(to left, transparent 0%, black 200%);
-    opacity: 0.1;
-    cursor: pointer;
-    border: none;
-  }
-  
-  .arrow-left:hover,
-  .arrow-right:hover {
-    opacity: 1;
-  }
-  
-  .arrow-right {
-    right: 0;
-    left: auto;
-    text-align: right;
-    background: linear-gradient(to right, transparent 0%, black 200%);
-  }
-  
-  .gallery {
-    display: flex;
-    flex-flow: row nowrap;
-    gap: 15px;
-  }
-  
-  .item {
-    width: 250px;
-    height: 250px;
-    flex-shrink: 0;
-    transition: all 600ms ease-in-out;
-    opacity: 0.5;
-  }
-  
-  .current-item {
-    opacity: 1;
-  }
-  
-  /* This is from w3schools */
-  /* 
-  https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .gallery-wrapper::-webkit-scrollbar {
-    display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .gallery-wrapper {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
-  }
-  
-  .cyan {
-    background: cyan;
-  }
-  
-  .deeppink {
-    background: deeppink;
-  }
-  
-  .turquoise {
-    background: turquoise;
-  }
-  
-  .darkblue {
-    background: darkblue;
-  }
-  
-  .purple {
-    background: purple;
-  }
+  text-align: center;
+  margin: 1em 0;
+  font-family: sans-serif;
+}
 
-  i{
-    font-size: 150px;
-    cursor: pointer;
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.container {
+  position: relative;
+  padding: 15px;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.gallery-wrapper {
+  overflow-x: auto;
+}
+
+.arrow-left,
+.arrow-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: auto;
+  bottom: 0;
+  font-size: 20px;
+  line-height: 250px;
+  width: 40px;
+  color: #fff;
+  transition: all 600ms ease-in-out;
+  background: linear-gradient(to left, transparent 0%, black 200%);
+  opacity: 0.1;
+  cursor: pointer;
+  border: none;
+}
+
+.arrow-left:hover,
+.arrow-right:hover {
+  opacity: 1;
+}
+
+.arrow-right {
+  right: 0;
+  left: auto;
+  text-align: right;
+  background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.gallery {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 15px;
+}
+
+.item {
+  width: 250px;
+  height: 250px;
+  flex-shrink: 0;
+  transition: all 600ms ease-in-out;
+  opacity: 0.5;
+}
+
+.current-item {
+  opacity: 1;
+}
+
+/* This is from w3schools */
+/* 
+  https://www.w3schools.com/howto/howto_css_hide_scrollbars.asp */
+/* Hide scrollbar for Chrome, Safari and Opera */
+.gallery-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.gallery-wrapper {
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .bg {
-    background-size: cover;
-    background-position: center;
-    height: 15vh;
-    width: 100%;
+  background-size: cover;
+  background-position: center;
+  height: 15vh;
+  width: 100%;
 }
 
 .navLink {
-    display: flex;
-    justify-content: space-around;
-    justify-self: flex-end;
-    padding: 45px;
-    padding-left: 8%;
-    padding-right: 8%;
+  display: flex;
+  justify-content: space-around;
+  justify-self: flex-end;
+  padding: 45px;
+  padding-left: 8%;
+  padding-right: 8%;
 }
 
 .navLink img {
-    max-width: 6%;
-    border-radius: 33%;
+  max-width: 10%;
+  border-radius: 33%;
+}
+
+.navLink li {
+  list-style: none;
+  text-decoration: none;
 }
 
 .navLink a {
-    text-decoration: none;
-    transition: 0.5s;
-    font-size: 17px;
-    font-weight: 500;
-    letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.5s;
+  font-size: 17px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  color: inherit;
 }
 
 .navLink a:hover {
-    color: #ff014f;
+  color: #a3b34c;
 }
 
-.btn {
-    padding: 18px 25px;
-    border-radius: 6px;
-    transition: 0.3s all ease;
-    cursor: pointer;
-    height: fit-content;
-    color: #ff014f;
+#btn {
+  padding: 18px 25px;
+  border-radius: 6px;
+  transition: 0.3s all ease;
+  cursor: pointer;
+  height: fit-content;
+  color: black;
 }
 
-.btn {
-    background: linear-gradient(145deg, #e2e8ec, #ffffff);
-    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
+#btn {
+  background: linear-gradient(145deg, #e2e8ec, #ffffff);
+  box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
 }
 
 .main {
-    width: 100%;
-    height: auto;
-    padding: auto;
-    margin-left: auto;
+  width: 100%;
+  height: auto;
+  padding: auto;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.main h1 {
+  font-size: 35px;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+.form {
+  padding: 20px;
+  margin: 30px
 }
 
 .footer {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-top: 400px;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 400px;
 }
