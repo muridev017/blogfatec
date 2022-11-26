@@ -10,6 +10,12 @@ body {
     font-size: 25px;
 }
 
+.darkMode {
+    background-color: #f0ffff;
+    color: black;
+    transition: all ease 0.5s;
+}
+
 .switch__container {
     margin: 20px;
     width: 100px;
@@ -158,7 +164,7 @@ body {
 }
 
 .information2 {
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
@@ -173,4 +179,9 @@ body {
 .information2 a:hover {
     font-size: 30px;
     transition: all ease 0.5s;
+}
+
+.information3 h1 {
+    font-size: 40px;
+    text-align: center;
 }
