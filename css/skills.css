@@ -5,9 +5,14 @@
 
 body {
     padding: 25px;
-    background-color: #0b254a;
+    background-color: #0b254a ;
     color: white;
-    
+}
+
+.darkMode {
+    background-color: #f0ffff;
+    color: black;
+    transition: all ease 0.5s;
 }
 
 .switch__container {
@@ -127,27 +132,12 @@ body {
 .lista {
     list-style: none;
     display: flex;
-
+    flex-direction: column;
+    justify-content: center;
     padding-left: 50px;
 
 }
 
 a {
     text-decoration: none;
-}
-
-.lista img {
-    display: flex;
-    justify-content: right;
-}
-
-.imgs {
-    width: 100px;
-    height: 100px;
-    background: linear-gradient(145deg, #e2e8ec, #ffffff);
-    box-shadow: 4px 4px 8px #cbcbcb, -4px -4px 8px #ffffff;
-    border-radius: 10px;
-    height: 200px;
-    width: 200px;
-    margin-top: 20%;
 }

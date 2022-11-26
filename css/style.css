@@ -12,7 +12,7 @@ body {
 }
 
 .darkMode {
-  background-color: #ffffff;
+  background-color: white;
   color: black;
   transition: all ease 0.5s;
 }
@@ -225,7 +225,17 @@ h1 {
   font-size: 35px;
 }
 
-.info{
+.main a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.main a:hover {
+  transition: all ease 0.5s;
+  font-size: 28px;
+}
+
+.info {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
