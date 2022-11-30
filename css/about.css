@@ -176,6 +176,11 @@ body {
     margin-right: 30px;
 }
 
+.information2 p {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
 .information2 a {
     text-decoration: none;
     color: inherit;
@@ -192,3 +197,13 @@ body {
     font-size: 40px;
     text-align: center;
 }
+
+
+.footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 400px;
+  }
