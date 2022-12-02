@@ -89,6 +89,19 @@ body {
     width: 100%;
 }
 
+.logo{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .logo a{
+   width: 250px;
+   height: 250px;
+  }
+  .logo img {
+    max-width: 100%;
+  }
+
 .navLink {
     display: flex;
     justify-content: space-around;
@@ -198,6 +211,26 @@ body {
     text-align: center;
 }
 
+.information3 p {
+    margin: 30px;
+    font-size: 20px;
+}
+
+.list{
+    margin: 30px;
+    font-size: 30px;
+}
+
+.imglist{
+    width: 250px;
+    height: 150pxpx;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
 
 .footer {
     width: 100%;
